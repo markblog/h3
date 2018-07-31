@@ -1,0 +1,9 @@
+id,survey_date,sentiment_score,survey_history,client_comments,strengths,weaknesses,opportunity,threats,report_id
+1,,,,,AAA1,BBB1,CCC1,DDD1,100001
+2,,,,,AAA2,BBB2,CCC2,DDD2,100002
+3,,,,,AAA3,BBB3,CCC3,DDD3,100003
+4,,,,,AAA4,BBB4,CCC4,DDD4,100004
+5,,,,,AAA5,BBB5,CCC5,DDD5,100005
+6,,,,,AAA6,BBB6,CCC6,DDD6,100006
+7,,,,,AAA7,BBB7,CCC7,DDD7,100007
+8,,,,,AAA8,BBB8,CCC8,DDD8,100008

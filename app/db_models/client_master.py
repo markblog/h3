@@ -1,0 +1,50 @@
+from app.ext import db
+import datetime
+from app.mixins.dict import DictMixin
+
+
+class ClientMaster(db.Model, DictMixin):
+
+    __tablename__ = 'client_master'
+    
+    id = db.Column(db.Integer, primary_key = True)
+    client_id = db.Column(db.String(128))
+    client_name = db.Column(db.String(128))
+    salesforceid = db.Column(db.String(128))
+    segment = db.Column(db.String(128))
+    mktsubsegment = db.Column(db.String(128))
+    insurance = db.Column(db.String(128))
+    bu_division = db.Column(db.String(128))
+    businessunithead = db.Column(db.String(128))
+    oracleid = db.Column(db.String(128))
+    tier = db.Column(db.Integer)
+    iis_top_100 = db.Column(db.String(128))
+    ssia_top_tier = db.Column(db.String(128))
+    directpublish = db.Column(db.String(128))
+    clientstartdate = db.Column(db.String(128))
+    dateclientterminated = db.Column(db.String(128))
+    site_lead = db.Column(db.String(128))
+    team_lead = db.Column(db.String(128))
+    manager = db.Column(db.String(128))
+    primary_client_contact = db.Column(db.String(128))
+    analyst_1 = db.Column(db.String(128))
+    analyst_2 = db.Column(db.String(128))
+    analyst_3 = db.Column(db.String(128))
+    site = db.Column(db.String(128))
+    bu_relationship_managers = db.Column(db.String(128))
+    bu_client_service = db.Column(db.String(128))
+    compliance_cs = db.Column(db.String(128))
+    auditlocation = db.Column(db.String(128))
+    acctcontact = db.Column(db.String(128))
+    pnasrvr = db.Column(db.String(128))
+    mchregion = db.Column(db.String(128))
+    daily = db.Column(db.String(128))
+    sector_name = db.Column(db.String(128))
+    oversight_site = db.Column(db.String(128))
+    oversight_group = db.Column(db.String(128))
+    operations_email_dist = db.Column(db.String(128))
+    jv_email_dist = db.Column(db.String(128))
+    client_specific_email_dist = db.Column(db.String(128))
+    watchlist = db.Column(db.String(128))
+    cm_requires_2nd_approver = db.Column(db.String(128))
+    update_time = db.Column(db.DateTime, default=datetime.datetime.utcnow())

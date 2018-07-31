@@ -1,0 +1,55 @@
+from app.ext import db
+import datetime
+from app.mixins.dict import DictMixin
+
+
+class Survey(db.Model, DictMixin):
+
+    __tablename__ = 'survey'
+
+    id = db.Column(db.Integer, primary_key = True)
+    client_id = db.Column(db.String(128))
+    client_name = db.Column(db.String(128))
+    tier = db.Column(db.String(128))
+    contact_name = db.Column(db.String(128))
+    contact_hierarchy = db.Column(db.String(128))
+    email = db.Column(db.String(128))
+    telephone = db.Column(db.String(128))
+    address1 = db.Column(db.String(128))
+    address2 = db.Column(db.String(128))
+    city = db.Column(db.String(128))
+    state = db.Column(db.String(128))
+    zipcode = db.Column(db.String(128))
+    client_response_received = db.Column(db.String(128))
+    q1 = db.Column(db.Float)
+    q2= db.Column(db.Float)
+    q3= db.Column(db.Float)
+    q4= db.Column(db.Float)
+    q5= db.Column(db.Float)
+    comment= db.Column(db.Text)
+    score = db.Column(db.String(128))
+    bu_rm = db.Column(db.String(128))
+    bu_rm_email = db.Column(db.String(128))
+    rm1 = db.Column(db.String(128))
+    rm2 = db.Column(db.String(128))
+    rm3 = db.Column(db.String(128))
+    rm4 = db.Column(db.String(128))
+    rm5 = db.Column(db.String(128))
+    bu_cs_lead = db.Column(db.String(128))
+    bu_cs_lead_email = db.Column(db.String(128))
+    cs1 = db.Column(db.String(128))
+    cs2 = db.Column(db.String(128))
+    cs3 = db.Column(db.String(128))
+    cs4 = db.Column(db.String(128))
+    cs5 = db.Column(db.String(128))
+    c_performance_lead = db.Column(db.String(128))
+    performance_lead_email = db.Column(db.String(128))
+    p1 = db.Column(db.String(128))
+    p2 = db.Column(db.String(128))
+    p3 = db.Column(db.String(128))
+    p4 = db.Column(db.String(128))
+    p5 = db.Column(db.String(128))
+    p_performance_lead = db.Column(db.String(128))
+    team_lead = db.Column(db.String(128))
+    update_time = db.Column(db.DateTime, default=datetime.datetime.utcnow())
+
